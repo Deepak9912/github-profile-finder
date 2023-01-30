@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,23 +25,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Github Profile Finder</a>
+                <a class="navbar-brand" href="#">Github Finder</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
 
                 </ul>
             </div>
-            <!--/.nav-collapse -->
         </div>
     </nav>
     <!--search bar-->
-    <div class="container">
+    <div class="container mt-5">
+
         <div class="searchContainer">
-            <h1>Search GitHub Users</h1>
-            <p class="lead">Enter a username to get the user's profile and repos</p>
-            <input type="text" placeholder="GitHub Username" id="searchuser" class="form-control">
+            <h1>Search Github Users</h1>
+            <p class="lead">Enter a username to fetch a users profile info and repos</p>
+            <input type="text" id="searchUser" class="form-control my-3" placeholder="Github Username...">
         </div>
+        <br>
+        <div id="profile"></div>
+
     </div>
 
 
@@ -54,11 +57,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
     <!-- Optional JavaScript -->
-    <script src="scripts/scripts.js"></script>
-</body>
-
-</html>
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>
