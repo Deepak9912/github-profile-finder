@@ -12,7 +12,23 @@ $(document).ready(function(){
             }
         }).done(function(user){
             $('#profile').html(`
-                ${user.name}
+                <div class="card border-primary mb-3" style="max-width: 100rem;" >
+                <div class="card-header"><h3>${user.name}</h3></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="img-thumbnail" src="${user.avatar_url}">
+                            <a target="_blank" class="btn btn-primary btn-btn-block" href="${user.html_url}">View Profile</a>
+                        </div>
+                        <div class="col-md-9">
+                            <span class="badge badge-dark">Public Repos: ${user.public_repos}</span>
+                            <span class="badge badge-dark">Public Gists: ${user.public_gists}</span>
+                            <span class="badge badge-dark">Public Followers: ${user.followers}</span>
+                            <span class="badge badge-dark">Following: ${user.following}</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
             `);
         });
     });
