@@ -21,10 +21,18 @@ $(document).ready(function(){
                             <a target="_blank" class="btn btn-primary btn-btn-block" href="${user.html_url}">View Profile</a>
                         </div>
                         <div class="col-md-9">
-                            <span class="badge badge-dark">Public Repos: ${user.public_repos}</span>
-                            <span class="badge badge-dark">Public Gists: ${user.public_gists}</span>
-                            <span class="badge badge-dark">Public Followers: ${user.followers}</span>
-                            <span class="badge badge-dark">Following: ${user.following}</span>
+                            <span class="label label-dark">Public Repos: ${user.public_repos}</span>
+                            <span class="label label-primary">Public Gists: ${user.public_gists}</span>
+                            <span class="label label-success">Public Followers: ${user.followers}</span>
+                            <span class="label label-danger">Following: ${user.following}</span>
+                            <br>
+                            <br>
+                            <ul class="list-group">
+                                <li class="list-group-item">Company: ${user.company}</li>
+                                <li class="list-group-item">Website/Blog: ${user.blog}</li>
+                                <li class="list-group-item">Location: ${user.location}</li>
+                                <li class="list-group-item">Member since: ${user.created_at}</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
