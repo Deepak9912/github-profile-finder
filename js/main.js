@@ -15,7 +15,9 @@ $(document).ready(function(){
                 url:'https://api.github.com/users/'+username+'/repos',
                 data:{
                     client_id:'b9315bcd5a07fcd759d8',
-                    client_secret:'a2b698bf7e7c02f898197cf136d1a41f704ca8e4'
+                    client_secret:'a2b698bf7e7c02f898197cf136d1a41f704ca8e4',
+                    sort: 'created: asc',
+                    per_page: 5
                 }
             }).done(function(repos){
                 $.each(repos, function(index, repo){
@@ -31,7 +33,7 @@ $(document).ready(function(){
                                 <span class="label label-success">Public Followers: ${repo.stargazers_count}</span>
                             </div>
                             <div class="col-md-2">
-                                <a href="{repo.html_url}" target="_blank" class="btn btn-default">Repo Page</a>
+                                <a href="${repo.html_url}" target="_blank" class="btn btn-default">Repo Page</a>
                             </div>
                         </div>
                     </div>
@@ -65,6 +67,7 @@ $(document).ready(function(){
                 </div>
                 </div>
                 <h3 class="page-header">Latest Repos</h3>
+                <div id="repos"></div>
             `);
         });
     });
